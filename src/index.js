@@ -3,10 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ThemeProvider } from './context/themeContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider>
+      <main className='h-screen sticky overflow-y-auto bg-neutral-50 dark:bg-neutral-700 transition-all'>
+        <App />
+      </main>
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
