@@ -18,7 +18,7 @@ const About = () => {
   })
 
   return (
-    <div className='max-w-3xl p-2 mx-auto my-5'>
+    <div className='max-w-3xl p-2 mx-auto my-5 text-black dark:text-white'>
       <ReactMarkdown children={md} />
     </div>
   )
