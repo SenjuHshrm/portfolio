@@ -16,6 +16,9 @@ const Navigation = () => {
         <li className={ location.pathname === '/links' ? 'border-b-4 border-sky-600' : '' }>
           <Link to='/links'>Links</Link>
         </li>
+        <li className={ location.pathname === '/todo' ? 'border-b-4 border-sky-600' : '' }>
+          <Link to='/todo'>To Do</Link>
+        </li>
         <li className={ location.pathname === '/about' ? 'border-b-4 border-sky-600' : '' }>
           <Link to='/about'>About</Link>
         </li>
