@@ -1,4 +1,5 @@
-import { info, works } from '../data'
+import { info, works, percentage } from '../data'
+import Language from './partials/Language'
 import Work from './partials/Work'
 
 const Home = () => {
@@ -19,6 +20,15 @@ const Home = () => {
         <span>Contact: {info.contact}</span>
         <span>Email: {info.email}</span>
         <span>Location: {info.location}</span>
+      </div>
+
+      <div className='p-2 w-full flex flex-col justify-start items-start w-auto border-2 border-slate-700 dark:border-slate-200'>
+        <span className='text-xl font-semibold'>Programming Languages</span>
+        {
+          percentage.map((perc) => (
+            <Language key={perc.language} perc={perc} />
+          ))
+        }
       </div>
 
       <div className='p-2 w-full flex flex-col justify-start items-start w-auto border-2 border-slate-700 dark:border-slate-200'>

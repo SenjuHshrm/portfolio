@@ -68,6 +68,25 @@ export const skills = [
   }
 ]
 
+export const percentage = [
+  {
+    language: 'HTML5/CSS3',
+    value: 75
+  }, {
+    language: 'Javascript',
+    value: 80
+  }, {
+    language: 'PHP',
+    value: 60
+  }, {
+    language: 'Java',
+    value: 75
+  }, {
+    language: 'VB .Net',
+    value: 65
+  }
+]
+
 export const links = [
   {
     name: "Facebook",

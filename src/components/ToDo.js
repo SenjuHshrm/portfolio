@@ -23,6 +23,10 @@ const ToDo = () => {
     let data = {title, desc, date: moment(date, 'YYYY-MM-DD').format('MMMM DD, YYYY'), prio, id: Math.floor(Math.random() * 100000) + 1}
     localStorage.setItem('todo', JSON.stringify([...todoList, data]))
     setTodoList([...todoList, data])
+    setTitle('')
+    setDesc('')
+    setDate('')
+    setPrio('')
   }
 
   const removeFromList = (id) => {
@@ -43,15 +47,15 @@ const ToDo = () => {
         <div className='flex flex-wrap gap-4 justify-start items-center w-full'>
           <div>
             <label className='block text-gray-700 dark:text-white text-sm' htmlFor='title'>Title</label>
-            <input type='text' className='shadow appearance-none border rounded text-gray-700' id='username' onChange={ (e)=>setTitle(e.target.value) } required/>
+            <input type='text' className='shadow appearance-none border rounded text-gray-700' id='username' value={title} onChange={ (e)=>setTitle(e.target.value) } required/>
           </div>
           <div>
             <label className='block text-gray-700 dark:text-white text-sm' htmlFor='desc'>Date</label>
-            <input type='date' className='shadow appearance-none border rounded text-gray-700' id='desc' onChange={ (e)=>setDate(e.target.value) } required/>
+            <input type='date' className='shadow appearance-none border rounded text-gray-700' id='desc' value={date} onChange={ (e)=>setDate(e.target.value) } required/>
           </div>
           <div>
             <label className='block text-gray-700 dark:text-white text-sm' htmlFor='prio'>Priority</label>
-            <select className='shadow border rounded text-gray-700' id='prio' onChange={ (e)=> setPrio(e.target.value) } required>
+            <select className='shadow border rounded text-gray-700' id='prio' onChange={ (e)=> setPrio(e.target.value) } value={prio} required>
               <option value=''>-- Select Priority --</option>
               <option value='bg-red-500'>High</option>
               <option value='bg-yellow-500'>Medium</option>
@@ -61,7 +65,7 @@ const ToDo = () => {
         </div>
         <div className='w-full'>
           <label className='block text-gray-700 dark:text-white text-sm' htmlFor='desc'>Description</label>
-          <textarea className='shadow appearance-none border rounded text-gray-700 w-full' id='desc' onChange={ (e)=>setDesc(e.target.value) } required/>
+          <textarea className='shadow appearance-none border rounded text-gray-700 w-full' id='desc' value={desc} onChange={ (e)=>setDesc(e.target.value) } required/>
         </div>
         <div>
           <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' type='submit'>Add</button>

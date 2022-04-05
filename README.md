@@ -7,7 +7,9 @@
 
 #### Home page 
 
-Loads data from data.js file by importing exported constant "info" which contains basic information about the author. Work information contained in exported constant "works" are iterated using Array.map() function.
+Loads data from data.js file by importing exported constant "info" which contains basic information about the author. Work information 
+contained in exported constant "works" are iterated using Array.map() function. Programming languages are fetched from exported constant "percentage" and iterated using Array.map(). Iterated values will be assigned to "Language" component then displays a percentage bar depending on the percentage of the iterated object element.
+
 <br>
 
 #### Skills page
